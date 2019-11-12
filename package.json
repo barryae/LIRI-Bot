@@ -1,0 +1,23 @@
+{
+  "name": "LIRI-Bot",
+  "version": "1.0.0",
+  "description": "LIRI searches Spotfy, Seatgeek, and OMDB for relevant results",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barryae/LIRI-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barryae/LIRI-Bot/issues"
+  },
+  "homepage": "https://github.com/barryae/LIRI-Bot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
