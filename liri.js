@@ -1,11 +1,10 @@
 require("dotenv").config();
-const fs = require('fs')
 const inquire = require('inquirer')
 const concert = require('./concert')
 const spotify = require('./spotify')
 const movie = require('./movie')
-const keys = require("./keys.js");
 
+//This handles the CLI using Inquirer. 
 prompt()
 function prompt() {
     inquire
@@ -26,7 +25,6 @@ function prompt() {
                             name: 'artist',
                         }
                     ]).then(answer => {
-                        // console.log(answer.artist)
                         const name = answer.artist;
                         const URLname = name.split(' ').join('-').toLowerCase();
                         concert(URLname)
@@ -42,6 +40,9 @@ function prompt() {
                             name: 'song',
                         }
                     ]).then(answer => {
+                        if (!answer) {
+                            spotify("I Want It That Way")
+                        }
                         const name = answer.song;
                         spotify(name)
                     })
@@ -56,14 +57,17 @@ function prompt() {
                             name: 'movie',
                         }
                     ]).then(answer => {
+                        if (!answer) {
+                            movie("Mr.Nobody")
+                        }
                         const name = answer.movie;
                         const URLname = name.split(' ').join('+');
-                        movie(URLnamecd)
+                        movie(URLname)
                     })
             }
 
             if (answer.choice === "Do what you would like LIRI") {
-
+                spotify("I Want It That Way")
             }
 
         })

@@ -3,6 +3,8 @@ const keys = require('./keys')
 const moment = require('moment')
 const concertsList = []
 
+//This is the module that handles the Concerts search.
+
 function Concert(response) {
     this.venue = response.venue.name;
     this.venueLocation = response.venue.display_location;

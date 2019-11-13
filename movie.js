@@ -1,6 +1,8 @@
 const axios = require('axios')
 const movieList = []
 
+//This module handles the Movie search.
+
 function Movie(response) {
     this.title = response.Title;
     this.year = response.Year;

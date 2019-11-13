@@ -2,6 +2,8 @@ const keys = require('./keys')
 const Spotify = require('node-spotify-api');
 const songList = []
 
+//This module handles the Spotify search.
+
 function Song(response) {
     this.artist = response.artists[0].name;
     this.songName = response.name;
